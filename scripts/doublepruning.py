@@ -23,7 +23,7 @@ import torch.nn.init as init
 import pickle
 
 # Custom Libraries
-import utils
+from scripts import utils
 
 # Tensorboard initialization
 writer = SummaryWriter()
@@ -482,7 +482,7 @@ if __name__ == "__main__":
     parser.add_argument("--arch_type", default="lenet5", type=str,
                         help="fc1 | lenet5 | alexnet | vgg16 | resnet18 | densenet121")
     parser.add_argument("--prune_percent", default=10, type=int, help="Pruning percent")
-    parser.add_argument("--prune_iterations", default=35, type=int, help="Pruning iterations count")
+    parser.add_argument("--prune_iterations", default=30, type=int, help="Pruning iterations count")
     parser.add_argument("--target_remaining", default=10, type=float,
                         help="Stop pruning when remaining weight percentage <= this value (e.g., 10 for 10%)")
     parser.add_argument("--pretrained_path", default="6_model_lt.pth.tar", type=str,

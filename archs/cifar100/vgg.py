@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+#
 # from torchvision.utils import load_state_dict_from_url
 
 
@@ -23,7 +24,7 @@ model_urls = {
 
 class VGG(nn.Module):
     #ANCHOR Change No. of Classes here.
-    def __init__(self, features, num_classes=10, init_weights=True):
+    def __init__(self, features, num_classes=100, init_weights=True):
         super(VGG, self).__init__()
         self.features = features
         self.avgpool = nn.AdaptiveAvgPool2d((7, 7))
